@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,75 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Size_Classes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Any Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eb0-Nb-THN">
+                                <rect key="frame" x="335" y="196.66666666666666" width="66" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Compact Height" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsr-v0-dss">
+                                <rect key="frame" x="221.5" y="120" width="125" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Regular Width" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylI-yG-KXC">
+                                <rect key="frame" x="314" y="138" width="109" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ylI-yG-KXC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="138" id="9i7-Zz-kWn"/>
+                            <constraint firstItem="Eb0-Nb-THN" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Pnw-Zp-Dxg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ylI-yG-KXC" secondAttribute="trailing" constant="313" id="XXd-fw-mH4"/>
+                            <constraint firstItem="fsr-v0-dss" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cAK-u8-FO4"/>
+                            <constraint firstItem="Eb0-Nb-THN" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jlN-XZ-a8v"/>
+                            <constraint firstItem="ylI-yG-KXC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="314" id="knG-o7-zeN"/>
+                            <constraint firstItem="fsr-v0-dss" firstAttribute="top" secondItem="ylI-yG-KXC" secondAttribute="bottom" constant="8" id="rgq-gc-H5a"/>
+                            <constraint firstItem="Eb0-Nb-THN" firstAttribute="top" secondItem="fsr-v0-dss" secondAttribute="bottom" constant="8.6666666666666572" id="x6Y-qj-J3z"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="fsr-v0-dss"/>
+                                <exclude reference="ylI-yG-KXC"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="XXd-fw-mH4"/>
+                                <exclude reference="9i7-Zz-kWn"/>
+                                <exclude reference="knG-o7-zeN"/>
+                                <exclude reference="rgq-gc-H5a"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="subviews">
+                                <include reference="fsr-v0-dss"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="ylI-yG-KXC"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="XXd-fw-mH4"/>
+                                <include reference="9i7-Zz-kWn"/>
+                                <include reference="knG-o7-zeN"/>
+                                <include reference="rgq-gc-H5a"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139.65517241379311" y="133.59999999999999"/>
         </scene>
     </scenes>
 </document>
